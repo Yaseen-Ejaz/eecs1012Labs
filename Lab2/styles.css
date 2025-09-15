@@ -1,0 +1,152 @@
+/* ===============================
+   CLASS & ID SELECTORS
+   =============================== */
+
+/* Class selector: affects all elements with class="firstHeading" */
+.firstHeading {
+  color: rgb(89, 196, 46);
+}
+
+/* ID selector: affects the element with id="secondHeading" */
+#secondHeading {
+  color: green;
+  border: 5px solid black;
+}
+
+/* ===============================
+   BOX MODEL EXAMPLE
+   =============================== */
+.box {
+  background-color: yellow;
+  padding: 100px;       /* inside spacing */
+  margin-top: 50px;     /* space above the box */
+  border: 5px solid red;
+}
+
+/* ===============================
+   TABLE STYLING
+   =============================== */
+table, tr {
+  border: 5px solid rgb(175, 65, 65);
+  width: 100%;
+}
+
+/* ===============================
+   IMAGE STYLING
+   =============================== */
+img {
+  float: right; /* Makes the image float to the right */
+}
+
+/* ===============================
+   POSITIONING EXAMPLES
+   =============================== */
+.relative {
+  position: relative; /* Moves relative to its normal position */
+  left: 50px;
+  top: 20px;
+}
+
+.static {
+  position: static; /* Default positioning (doesn’t move) */
+}
+
+.absolute {
+  position: absolute; /* Moves relative to nearest positioned ancestor */
+  left: 0px;
+  top: 0px;
+}
+
+.fixed {
+  position: fixed; /* Stays fixed even when scrolling */
+  left: 300px;
+  top: 300px;
+}
+
+/* ===============================
+   CSS GRID EXAMPLE
+   =============================== */
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto; /* 3 equal columns */
+  background-color: dodgerblue;
+  padding: 10px;
+  row-gap: 20px;        /* vertical gap between rows */
+  column-gap: 50px;     /* horizontal gap between columns */
+  justify-content: center; /* centers grid items horizontally */
+}
+
+/* Styles applied to all direct children of .container */
+.container > div {
+  background-color: #f1f1f1;
+  border: 1px solid black;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
+
+/* Example of spanning multiple rows/columns */
+.first {
+  grid-row: 2 / 4;
+}
+.third {
+  grid-column: 2 / 4;
+}
+
+/* ===============================
+   MEDIA QUERIES (Responsive Design)
+   =============================== */
+
+/* Screen ≥ 600px */
+@media (min-width: 600px) {
+  h1 {
+    color: lightblue;
+  }
+  img {
+    height: 200px;
+  }
+}
+
+/* Screen ≥ 1000px */
+@media (min-width: 1000px) {
+  h1 {
+    color: red;
+  }
+  img {
+    height: 1000px;
+  }
+}
+
+/* Screen ≤ 600px */
+@media only screen and (max-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 6;}
+  .item3 {grid-area: 3 / span 6;}
+  .item4 {grid-area: 4 / span 6;}
+  .item5 {grid-area: 5 / span 6;}
+}
+
+/* Screen ≥ 600px */
+@media only screen and (min-width: 600px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 1;}
+  .item3 {grid-area: 2 / span 4;}
+  .item4 {grid-area: 3 / span 6;}
+  .item5 {grid-area: 4 / span 6;}
+}
+
+/* Screen ≥ 768px */
+@media only screen and (min-width: 768px) {
+  .item1 {grid-area: 1 / span 6;}
+  .item2 {grid-area: 2 / span 1;}
+  .item3 {grid-area: 2 / span 4;}
+  .item4 {grid-area: 2 / span 1;}
+  .item5 {grid-area: 3 / span 6;}
+}
+
+/* ===============================
+   EXTRA SPACING AT BOTTOM
+   =============================== */
+.bottom {
+  padding: 200px;
+}
